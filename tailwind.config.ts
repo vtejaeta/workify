@@ -1,16 +1,18 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const colors = require("tailwindcss/colors");
 const svgToDataUri = require("mini-svg-data-uri");
-const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -23,14 +25,36 @@ const config = {
     },
     extend: {
       colors: {
+        background: "hsl(var(--background))",
+        surface: "hsl(var(--surface))",
+        onBackground: "hsl(var(--on-background))",
+        onSurface: "hsl(var(--on-surface))",
         border: "hsl(var(--border))",
+
+        primary1: "hsl(var(--primary))",
+        onPrimary: "hsl(var(--on-primary))",
+        primaryContainer: "hsl(var(--primary-container))",
+        onPrimaryContainer: "hsl(var(--on-primary-container))",
+
+        secondary1: "hsl(var(--secondary))",
+        onSecondary: "hsl(var(--on-secondary))",
+        secondaryContainer: "hsl(var(--secondary-container))",
+        onSecondaryContainer: "hsl(var(--on-secondary-container))",
+
+        tertiary1: "hsl(var(--tertiary))",
+        onTertiary: "hsl(var(--on-tertiary))",
+        tertiaryContainer: "hsl(var(--tertiary-container))",
+        onTertiaryContainer: "hsl(var(--on-tertiary-container))",
+
+        // border: "hsl(var(--outline))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        // background: "hsl(var(--background))",
+        foreground: "hsl(var(--surface))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          background: "hsl(var(--bgs))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -71,8 +95,8 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        "heading": ["var(--font-aeonik)"],
-        "default": ["var(--font-inter)"],
+        heading: ["var(--font-aeonik)"],
+        default: ["var(--font-inter)"],
       },
       keyframes: {
         "accordion-down": {
@@ -83,11 +107,11 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "grid": {
+        grid: {
           "0%": { transform: "translateY(-50%)" },
           "100%": { transform: "translateY(0)" },
         },
-        "wiggle": {
+        wiggle: {
           "0%, 100%": {
             transform: "translateX(0%)",
             transformOrigin: "50% 50%",
@@ -98,7 +122,7 @@ const config = {
           "60%": { transform: "translateX(2px) rotate(1.6deg)" },
           "75%": { transform: "translateX(-1px) rotate(-0.8deg)" },
         },
-        "spinner": {
+        spinner: {
           "0%": {
             opacity: "1",
           },
@@ -106,7 +130,7 @@ const config = {
             opacity: "0",
           },
         },
-        "blink": {
+        blink: {
           "0%": {
             opacity: "0.2",
           },
@@ -117,7 +141,7 @@ const config = {
             opacity: "0.2",
           },
         },
-        "shimmer": {
+        shimmer: {
           "0%, 90%, 100%": {
             "background-position": "calc(-100% - var(--shimmer-width)) 0",
           },
@@ -127,15 +151,15 @@ const config = {
         },
         "image-glow": {
           "0%": {
-            "opacity": "0",
+            opacity: "0",
             "animation-timing-function": "cubic-bezier(.74, .25, .76, 1)",
           },
           "10%": {
-            "opacity": "0.5",
+            opacity: "0.5",
             "animation-timing-function": "cubic-bezier(.12, .01, .08, .99)",
           },
           "100%": {
-            "opacity": "0.7",
+            opacity: "0.7",
           },
         },
         "border-beam": {
@@ -143,16 +167,16 @@ const config = {
             "offset-distance": "100%",
           },
         },
-        "marquee": {
+        marquee: {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(calc(-100% - var(--gap)))" },
         },
-        "flip": {
+        flip: {
           to: {
             transform: "rotate(360deg)",
           },
         },
-        "rotate": {
+        rotate: {
           to: {
             transform: "rotate(90deg)",
           },
@@ -161,30 +185,30 @@ const config = {
           "0%,70%,100%": { opacity: "1" },
           "20%,50%": { opacity: "0" },
         },
-        "loading": {
+        loading: {
           "0%": {
             transform: "rotate(0deg)",
           },
           "100%": {
             transform: "rotate(360deg)",
           },
-        }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "grid": "grid 15s linear infinite",
-        "wiggle": "wiggle 0.75s infinite",
-        "spinner": "spinner 1.2s linear infinite",
-        "blink": "blink 1.4s infinite both",
-        "shimmer": "shimmer 5s infinite",
+        grid: "grid 15s linear infinite",
+        wiggle: "wiggle 0.75s infinite",
+        spinner: "spinner 1.2s linear infinite",
+        blink: "blink 1.4s infinite both",
+        shimmer: "shimmer 5s infinite",
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
         "image-glow": "image-glow 4s ease-out 0.6s forwards",
-        "marquee": "marquee var(--duration) linear infinite",
-        "flip": "flip 6s infinite steps(2, end)",
-        "rotate": "rotate 3s linear infinite both",
+        marquee: "marquee var(--duration) linear infinite",
+        flip: "flip 6s infinite steps(2, end)",
+        rotate: "rotate 3s linear infinite both",
         "caret-blink": "caret-blink 1.25s ease-out infinite",
-        "loading": "loading 0.5s linear infinite",
+        loading: "loading 0.5s linear infinite",
       },
     },
   },
@@ -226,6 +250,6 @@ function addVariablesForColors({ addBase, theme }: any) {
   addBase({
     ":root": newVars,
   });
-};
+}
 
-export default config
+export default config;

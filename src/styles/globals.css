@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    --foreground: 0 0% 98%;
-    --background: 0 0% 3.9%;
+    /* --background: 0 0% 98%;
+    --foreground: 0 0% 3.9%;
 
     --card: 0 0% 3.9%;
     --card-foreground: 0 0% 98%;
@@ -13,7 +13,7 @@
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 0 0% 98%;
+    --primary: 145 100% 34.9%;
     --primary-foreground: 0 0% 9%;
 
     --secondary: 0 0% 14.9%;
@@ -28,14 +28,48 @@
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 14.9%;
+    
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
 
     --radius: 0.5rem;
+
+    --border: 112 7% 45%;
+    --bgs: 101 68% 96%; */
+
+    --background: 148 73% 91%; /* #F3FCEF */
+    --surface: 148 73% 91%; /* #F3FCEF */
+    --on-background: 148 29% 20%; /* #161D16 */
+    --on-surface: 148 29% 20%; /* #161D16 */
+    --border: 112 10% 45%; /* #6D7B6B */
+
+    --primary: 144 100% 41%; /* #006E2B */
+    --on-primary: 0 0% 100%; /* #FFFFFF */
+    --primary-container: 144 100% 41%; /* #00B24B */
+    --on-primary-container: 144 100% 11%; /* #003B14 */
+
+    --secondary: 30 10% 92%; /* #605E58 */
+    --on-secondary: 0 0% 100%; /* #FFFFFF */
+    --secondary-container: 30 10% 92%; /* #F8F4EB */
+    --on-secondary-container: 30 10% 43%; /* #716F68 */
+
+    --tertiary: 200 100% 27%; /* #00658F */
+    --on-tertiary: 0 0% 100%; /* #FFFFFF */
+    --tertiary-container: 200 100% 66%; /* #3FA1D8 */
+    --on-tertiary-container: 200 100% 15%; /* #00344D */
+
+    --error: -5 100% 36%; /* #BA1A1A */
+    --on-error: 0 0% 100%; /* #FFFFFF */
+    --error-container: -5 100% 84%; /* #FFDAD6 */
+    --on-error-container: -5 100% 22%; /* #93000A */
+
+    --surface-variant: 145 20% 83%; /* #D8E7D4 */
+    --outline: -4.5 12% 45%; /* #6D7B6B (same as border) */
+
+    --accent: 194 100% 41%;
   }
 
-  .dark {
+  /* .dark {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
 
@@ -69,7 +103,7 @@
     --border: 0 0% 89.8%;
     --input: 0 0% 89.8%;
     --ring: 0 0% 3.9%;
-  }
+  } */
 }
 
 ::selection {
@@ -77,14 +111,9 @@
   color: hsl(var(--foreground));
 }
 
-html, body {
-  font-family: "Inter", sans-serif !important;
-}
-
-.dumy {
-  color: hsl(0 0% 98%);
-  color: rgb(38, 38, 38)
-    /* @apply to-purple-500 */
+html,
+body {
+  font-family: "DM Sans", sans-serif !important;
 }
 
 ::-webkit-scrollbar {
@@ -102,9 +131,23 @@ html, body {
 }
 
 .gradient {
-  background: conic-gradient(from 230.29deg at 51.63% 52.16%, rgb(36, 0, 255) 0deg, rgb(0, 135, 255) 67.5deg, rgb(108, 39, 157) 198.75deg, rgb(24, 38, 163) 251.25deg, rgb(54, 103, 196) 301.88deg, rgb(105, 30, 255) 360deg);
+  background: conic-gradient(
+    from 230.29deg at 51.63% 52.16%,
+    rgb(36, 0, 255) 0deg,
+    rgb(0, 135, 255) 67.5deg,
+    rgb(108, 39, 157) 198.75deg,
+    rgb(24, 38, 163) 251.25deg,
+    rgb(54, 103, 196) 301.88deg,
+    rgb(105, 30, 255) 360deg
+  );
 }
 
 .not-found {
   box-shadow: rgba(150, 18, 226, 0.3) 5px 5px;
 }
+
+/* 
+Primary:- #00B24B
+Secondary:- #F8F4EB 
+Accent:- #3FA1D8
+*/
