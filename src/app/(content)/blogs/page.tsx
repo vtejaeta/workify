@@ -47,21 +47,8 @@ const featuredBlogs = [
   },
 ];
 
-interface Blog {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  tags: string[];
-  date: string;
-  link: string;
-}
 
-interface BlogCarouselProps {
-  featuredBlogs: Blog[];
-}
-
-const BlogCarousel: React.FC<BlogCarouselProps> = () => {
+const BlogCarousel = () => {
   const [current, setCurrent] = useState(0);
   const [visibleCards, setVisibleCards] = useState(3);
 
