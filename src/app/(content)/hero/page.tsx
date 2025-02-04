@@ -49,7 +49,7 @@ const HeroSection = () => {
 
       <AnimationContainer delay={0.5} reverse viewport>
         <p className="w-full text-base md:text-lg lg:text-xl text-center max-w-full px-4 md:px-0 lg:px-0 md:max-w-[560px] lg:max-w-[660px]">
-          Whether you're launching a new venture or scaling an established
+          Whether you&apos;re launching a new venture or scaling an established
           brand, our platform equips you to grow and thrive.
         </p>
       </AnimationContainer>
