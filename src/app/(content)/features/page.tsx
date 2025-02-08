@@ -66,7 +66,7 @@ const Features = () => {
 
           {/* TODO:- Adjust font size, margin and colors (slightly lighter version) */}
           <p className="w-full text-sm md:text-lg lg:text-xl text-center max-w-full px-4 md:px-0 lg:px-0 md:max-w-[560px] lg:max-w-[720px] mt-4 text-neutral-600">
-            Inwesol integrates psychological evidence with GenAI's scale to
+            Inwesol integrates psychological evidence with GenAI&apos;s scale to
             democratise career information, provide personalised career
             coaching, and create wellbeing-enabled communities.
           </p>

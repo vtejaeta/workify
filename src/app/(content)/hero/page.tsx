@@ -27,7 +27,7 @@ const HeroSection = () => {
         <p className="w-full text-base sm:text-lg md:text-xl text-center text-gray-700 max-w-xs sm:max-w-[600px] px-4 sm:px-8 md:px-0 leading-relaxed">
           Coaching individuals to thrive in their careers through the{" "}
           <span className="whitespace-nowrap">self-discovery</span> of their{" "}
-          <span className="text-primary1 font-bold">"why"</span>
+          <span className="text-primary1 font-bold">&quot;why&quot;</span>
         </p>
       </AnimationContainer>
 
