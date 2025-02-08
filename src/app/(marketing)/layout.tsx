@@ -18,7 +18,7 @@ const MarketingLayout = ({ children }: Props) => {
       <Navbar />
 
       <HeroSection />
-      <div className="p-16"></div>
+
       <main className="h-screen relative">{children}</main>
     </>
   );

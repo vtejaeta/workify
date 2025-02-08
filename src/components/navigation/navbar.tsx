@@ -121,7 +121,7 @@ const Navbar = () => {
             </NavigationMenu>
           </div>
 
-          <div className="hidden lg:flex items-center">
+          {/* <div className="hidden lg:flex items-center">
             {user ? (
               <div className="flex items-center">
                 <Link
@@ -148,7 +148,7 @@ const Navbar = () => {
                 </Link>
               </div>
             )}
-          </div>
+          </div> */}
 
           <MobileNavbar />
         </MaxWidthWrapper>

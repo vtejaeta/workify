@@ -31,7 +31,7 @@ const config = {
         onSurface: "hsl(var(--on-surface))",
         border: "hsl(var(--border))",
 
-        primary1: "hsl(var(--primary))",
+        primary1: "hsl(var(--primary1))",
         onPrimary: "hsl(var(--on-primary))",
         primaryContainer: "hsl(var(--primary-container))",
         onPrimaryContainer: "hsl(var(--on-primary-container))",

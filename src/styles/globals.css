@@ -43,6 +43,7 @@
     --on-surface: 148 29% 20%; /* #161D16 */
     --border: 112 10% 45%; /* #6D7B6B */
 
+    --primary1: 145 100% 35%; /* #00B24B */
     --primary: 144 100% 41%; /* #006E2B */
     --on-primary: 0 0% 100%; /* #FFFFFF */
     --primary-container: 144 100% 41%; /* #00B24B */
@@ -151,3 +152,22 @@ Primary:- #00B24B
 Secondary:- #F8F4EB 
 Accent:- #3FA1D8
 */
+
+@keyframes border-glow {
+  0% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+}
+
+.animate-border-glow {
+  animation: border-glow 2s infinite ease-in-out;
+}

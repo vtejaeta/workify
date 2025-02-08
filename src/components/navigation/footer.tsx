@@ -23,7 +23,7 @@ const Footer = () => {
           <div className="md:grid md:grid-cols-2 md:gap-8">
             <AnimationContainer delay={0.2}>
               <div className="">
-                <h3 className="text-base font-medium text-white">Product</h3>
+                <h3 className="text-primary1 font-medium text-white">Product</h3>
                 <ul className="mt-4 text-sm text-muted-foreground">
                   <li className="mt-2">
                     <Link
@@ -62,7 +62,7 @@ const Footer = () => {
             </AnimationContainer>
             <AnimationContainer delay={0.3}>
               <div className="mt-10 md:mt-0 flex flex-col">
-                <h3 className="text-base font-medium text-white">
+                <h3 className="text-primary1 font-medium text-white">
                   Integrations
                 </h3>
                 <ul className="mt-4 text-sm text-muted-foreground">
@@ -105,7 +105,7 @@ const Footer = () => {
           <div className="md:grid md:grid-cols-2 md:gap-8">
             <AnimationContainer delay={0.4}>
               <div className="">
-                <h3 className="text-base font-medium text-white">Resources</h3>
+                <h3 className="text-primary1 font-medium text-white">Resources</h3>
                 <ul className="mt-4 text-sm text-muted-foreground">
                   <li className="mt-2">
                     <Link
@@ -128,7 +128,7 @@ const Footer = () => {
             </AnimationContainer>
             <AnimationContainer delay={0.5}>
               <div className="mt-10 md:mt-0 flex flex-col">
-                <h3 className="text-base font-medium text-white">Company</h3>
+                <h3 className="text-primary1 font-medium text-white">Company</h3>
                 <ul className="mt-4 text-sm text-muted-foreground">
                   <li className="">
                     <Link

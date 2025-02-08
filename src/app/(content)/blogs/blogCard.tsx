@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, SquareArrowOutUpRightIcon } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import React from "react";
 
 interface Blog {
@@ -55,10 +55,10 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
 
         <a
           href={blog.link}
-          className="mt-auto flex items-center gap-2 text-primary font-medium hover:underline"
+          className="mt-auto flex items-center gap-1 text-primary font-medium hover:underline bg-[#3FA1D8]/10 w-fit px-2 py-1 rounded-2xl"
         >
-          <span>Read More</span>
-          <SquareArrowOutUpRightIcon size={16} />
+          <span className="text-[#3FA1D8]">Read More</span>
+          <ArrowUpRight size={16} stroke="#3FA1D8" />
         </a>
       </div>
     </div>

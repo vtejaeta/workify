@@ -28,6 +28,8 @@ import Features from "../(content)/features/page";
 import ExplorerCard from "../(content)/explorer-card/ExplorerCard";
 import BlogPage from "./resources/blog/page";
 import FeaturedBlogsCarousel from "../(content)/blogs/page";
+import BlogCard from "../(content)/blogs/blogCard";
+import BlogCarousel from "../(content)/blogs/page";
 
 const HomePage = async () => {
   const user = await currentUser();
@@ -37,6 +39,8 @@ const HomePage = async () => {
       <Features />
 
       {/* <BlogPage /> */}
+
+      <BlogCarousel />
 
       <ExplorerCard />
 
