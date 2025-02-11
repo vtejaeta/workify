@@ -14,7 +14,7 @@ export default function RootLayout({
     <html lang="en" className="scrollbar">
       <body
         className={cn(
-          "min-h-screen antialiased !font-default overflow-x-hidden",
+          "min-h-screen antialiased !font-default",
           aeonik.variable,
           inter.variable
         )}

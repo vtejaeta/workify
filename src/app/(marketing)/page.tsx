@@ -30,22 +30,26 @@ import BlogPage from "./resources/blog/page";
 import FeaturedBlogsCarousel from "../(content)/blogs/page";
 import BlogCard from "../(content)/blogs/blogCard";
 import BlogCarousel from "../(content)/blogs/page";
+import StickyScrollRevealDemo from "@/components/ui/process";
+import HeroSection from "../(content)/hero/page";
 
 const HomePage = async () => {
   const user = await currentUser();
 
   return (
-    <>
+    <div className="h-full">
+      <HeroSection />
+
       <Features />
 
-      {/* <BlogPage /> */}
+      <StickyScrollRevealDemo />
 
       <BlogCarousel />
 
       <ExplorerCard />
 
       <Footer />
-    </>
+    </div>
   );
 
   // return (

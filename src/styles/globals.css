@@ -107,6 +107,16 @@
   } */
 }
 
+@layer utilities {
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hidden {
+    -ms-overflow-style: none; /* IE/Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
 ::selection {
   background-color: rgba(168, 85, 247, 0.2);
   color: hsl(var(--foreground));
@@ -171,3 +181,9 @@ Accent:- #3FA1D8
 .animate-border-glow {
   animation: border-glow 2s infinite ease-in-out;
 }
+
+/* 
+  Primary - #00B24B
+  Secondary - #F8F4EB
+  Accent - #3FA1D8
+*/

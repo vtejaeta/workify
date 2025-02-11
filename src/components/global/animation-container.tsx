@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, MotionStyle } from "framer-motion";
 
 interface AnimationContainerProps {
   children: React.ReactNode;
@@ -8,6 +8,7 @@ interface AnimationContainerProps {
   reverse?: boolean;
   className?: string;
   viewport?: boolean;
+  extraStyles?: MotionStyle;
 }
 
 const AnimationContainer = ({
@@ -16,10 +17,12 @@ const AnimationContainer = ({
   reverse,
   delay,
   viewport = false,
+  extraStyles = {}, // ✅ Accept extra styles dynamically
 }: AnimationContainerProps) => {
   return (
     <motion.div
       className={className}
+      style={extraStyles} // ✅ Apply extra styles here
       initial={{ opacity: 0, y: reverse ? -20 : 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: viewport }}

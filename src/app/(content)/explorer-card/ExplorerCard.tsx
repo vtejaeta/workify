@@ -12,14 +12,14 @@ const ExplorerCard = () => {
             className="text-base sm:text-lg font-semibold text-[#00B24B]"
             aria-label="Create your own success story"
           >
-            Create your own success story
+            Take a step towards self-discovery.
           </span>
         </AnimationContainer>
 
         <AnimationContainer delay={0.4}>
           <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 max-w-screen-lg leading-snug">
-            Join our exclusive community to stay ahead of the curve. Get early
-            access to our platform.
+            The Explorer is launching soon! Join our community and get notified
+            to be the first to explore careers.
           </h3>
         </AnimationContainer>
 

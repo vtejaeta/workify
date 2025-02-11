@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import BlogCard from "./blogCard";
+import MagicBadge from "@/components/ui/magic-badge";
 
 const featuredBlogs = [
   {
@@ -25,28 +26,27 @@ const featuredBlogs = [
     date: "22nd Mar 2024",
     tags: ["react", "js", "ts"],
   },
-  {
-    id: 3,
-    title: "Mastering UI/UX for Better Engagement",
-    description:
-      "Learn how to create stunning user experiences that drive engagement and conversions.",
-    image: "https://picsum.photos/200/?design",
-    link: "#",
-    date: "13th Apr 2020",
-    tags: [],
-  },
-  {
-    id: 4,
-    title: "Optimizing Performance for Web Apps",
-    description:
-      "Tips and best practices to improve web application speed and user experience.",
-    image: "https://picsum.photos/200/?performance",
-    link: "#",
-    date: "11th June 1999",
-    tags: [],
-  },
+  // {
+  //   id: 3,
+  //   title: "Mastering UI/UX for Better Engagement",
+  //   description:
+  //     "Learn how to create stunning user experiences that drive engagement and conversions.",
+  //   image: "https://picsum.photos/200/?design",
+  //   link: "#",
+  //   date: "13th Apr 2020",
+  //   tags: [],
+  // },
+  // {
+  //   id: 4,
+  //   title: "Optimizing Performance for Web Apps",
+  //   description:
+  //     "Tips and best practices to improve web application speed and user experience.",
+  //   image: "https://picsum.photos/200/?performance",
+  //   link: "#",
+  //   date: "11th June 1999",
+  //   tags: [],
+  // },
 ];
-
 
 const BlogCarousel = () => {
   const [current, setCurrent] = useState(0);
@@ -77,16 +77,16 @@ const BlogCarousel = () => {
   };
 
   return (
-    <section className="w-full bg-secondary py-14">
+    <section className="w-full bg-[#f5fafd] py-14">
       <div className="max-w-screen-lg mx-auto px-6">
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center mb-8">
           Featured Blogs
         </h2>
 
-        <div className="relative overflow-hidden">
+        <div className="relative">
           {/* Blog Cards Container */}
           <div
-            className="flex transition-transform duration-500 ease-in-out gap-6"
+            className="flex transition-transform duration-500 items-center justify-center ease-in-out gap-6"
             style={{
               transform: `translateX(-${current * (100 / visibleCards)}%)`,
             }}
@@ -133,7 +133,7 @@ const BlogCarousel = () => {
                 key={index}
                 onClick={() => setCurrent(index)}
                 className={`h-2.5 w-2.5 rounded-full transition ${
-                  current === index ? "bg-primary scale-110" : "bg-gray-400"
+                  current === index ? "bg-[#3FA1D8] scale-110" : "bg-gray-400"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />

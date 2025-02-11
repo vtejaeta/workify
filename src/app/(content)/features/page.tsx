@@ -2,8 +2,24 @@
 
 import React from "react";
 
-import { AnimationContainer } from "@/components";
+import { AnimationContainer, MaxWidthWrapper } from "@/components";
 import MagicBadge from "@/components/ui/magic-badge";
+import {
+  ClipboardCheck,
+  MessageCircle,
+  Search,
+  Sparkle,
+  Sparkles,
+  User,
+  UserCheck,
+} from "lucide-react";
+
+// className={`p-6 rounded-xl border border-gray-300/50 h-[350px] shadow-sm ${
+//   index == 1 || index == 2 ? "bg-[#F8F4EB]" : "bg-[#f2fff2]"
+// }`}
+
+const featureCardIconClassName =
+  "h-12 w-12 origin-left text-accent transition-all ease-in-out duration-300 group-hover:scale-75";
 
 const Features = () => {
   const availableFeatures = [
@@ -14,6 +30,8 @@ const Features = () => {
       redirectUrl: "",
       oneLiner:
         "Explorer helps you find different career options and understand what skills and knowledge you need.",
+      icon: <Search className={featureCardIconClassName} />,
+      slug: "explorer",
     },
     {
       heading: "CoCo",
@@ -22,6 +40,8 @@ const Features = () => {
       redirectUrl: "",
       oneLiner:
         "Coco is your personal AI Agent that provides career information, helps with decisions, and supports your overall wellbeing.",
+      icon: <Sparkles className={featureCardIconClassName} />,
+      slug: "coco",
     },
     {
       heading: "Coaching",
@@ -30,6 +50,14 @@ const Features = () => {
       redirectUrl: "",
       oneLiner:
         "1:1 personalized career coaching with a psychologist will assist you in understanding your purpose and strengths, setting goals, and taking action.",
+      icon: (
+        <div className="flex flex-row items-center justify-center text-5xl text-accent">
+          <User className={`${featureCardIconClassName} h-10 w-10`} />
+          :
+          <User className={`${featureCardIconClassName} h-10 w-10`} />
+        </div>
+      ),
+      slug: "coaching",
     },
     {
       heading: "Behavioural Tools",
@@ -37,43 +65,47 @@ const Features = () => {
         "Behavioural Tools help individuals stay productive, calm, and focused while evaluating daily progress and learning key career strategies. Designed for behavioural change, these tools support you throughout your self-discovery journey and keep you on track afterwards.",
       redirectUrl: "",
       oneLiner:
-        "B-Tools help you stay productive, focused, and on track, supporting your self-discovery journey and career progress.",
+        "Behavioural Tools help you stay productive, focused, and on track, supporting your self-discovery journey and career progress.",
+      icon: <ClipboardCheck className={featureCardIconClassName} />,
+      slug: "behavioural-tools",
     },
   ];
 
   return (
-    <div className="m-4">
+    <div className="bg-[#f5fafd] pb-12">
       <AnimationContainer delay={0.2}>
-        <div className="flex flex-col items-center justify-center lg:items-center w-full py-8 max-w-4xl mx-auto">
+        <div className="flex flex-col items-center justify-center w-full py-12 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <MagicBadge title="Features" />
-          <h2 className="text-center lg:text-center text-2xl md:text-3xl !leading-[1.1] font-medium font-heading text-onBackground mt-6 xl:px-6">
-            Resolve career dilemmas and prioritise your wellbeing with the
-            rigour of{" "}
+
+          <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-semibold font-heading leading-snug mt-6">
             <span className="text-primary1 font-bold whitespace-nowrap">
-              {/* Resolve career dilemmas and prioritise your wellbeing with the rigour of psychology ( Green ) and AI ( Blue ) . */}
+              Psychology
+            </span>{" "}
+            and{" "}
+            <span className="text-accent font-bold whitespace-nowrap">AI</span>{" "}
+            empower you to achieve career wellbeing.
+          </h2>
+          {/* <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-semibold font-heading leading-snug mt-6">
+            Resolve career dilemmas and prioritize your wellbeing with the
+            rigour of
+            <span className="text-primary1 font-bold whitespace-nowrap">
+              {" "}
               Psychology{" "}
             </span>
-            and{" "}
-            <span className="text-accent font-bold whitespace-nowrap">
-              {/* Resolve career dilemmas and prioritise your wellbeing with the rigour of psychology ( Green ) and AI ( Blue ) . */}
-              AI
-            </span>
-            {/* <span className="block text-3xl">
-              {" "}
-              That Can Increase Your Productivity
-            </span> */}
-          </h2>
+            and
+            <span className="text-accent font-bold whitespace-nowrap"> AI</span>
+            .
+          </h2> */}
 
-          {/* TODO:- Adjust font size, margin and colors (slightly lighter version) */}
-          <p className="w-full text-sm md:text-lg lg:text-xl text-center max-w-full px-4 md:px-0 lg:px-0 md:max-w-[560px] lg:max-w-[720px] mt-4 text-neutral-600">
+          <p className="text-center text-base sm:text-md md:text-lg leading-relaxed max-w-2xl mt-4 text-neutral-700">
             Inwesol integrates psychological evidence with GenAI&apos;s scale to
-            democratise career information, provide personalised career
-            coaching, and create wellbeing-enabled communities.
+            democratize career information, provide personalized career
+            coaching, and build wellbeing-enabled communities.
           </p>
         </div>
       </AnimationContainer>
 
-      <div className="flex items-center justify-center w-full">
+      {/* <div className="flex items-center justify-center w-full">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 w-full max-w-[800px]">
           {availableFeatures.map((eachFeature, index) => {
             return (
@@ -89,7 +121,6 @@ const Features = () => {
                       <h2 className="text-2xl font-extrabold mb-2 text-onBackground">
                         {eachFeature.heading}
                       </h2>
-                      {/* BG Color -> #f2fff2 */}
                       <p className="text-base leading-5 text-gray-600">
                         {eachFeature.oneLiner}
                       </p>
@@ -110,7 +141,67 @@ const Features = () => {
             );
           })}
         </div>
+      </div> */}
+
+      <div className="w-full flex justify-center items-center px-4 md:px-6 lg:px-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[1fr] max-w-[1000px] w-full">
+          {availableFeatures.map((eachFeature, index) => {
+            const isWiderCard = index === 1 || index === 2;
+            const commonClassName =
+              "h-full p-6 rounded-2xl shadow-md border bg-white flex flex-col justify-end";
+
+            return (
+              <div
+                className={
+                  isWiderCard
+                    ? `sm:col-span-2 ${commonClassName}`
+                    : `${commonClassName}`
+                }
+                key={index}
+              >
+                <AnimationContainer delay={(index + 1) * 0.2} key={index}>
+                  <div className="flex flex-col gap-2 pt-4 justify-end items-start">
+                    {eachFeature.icon}
+
+                    <div className="transition-all duration-300 ease-in-out transform">
+                      <h3 className="text-xl font-bold text-gray-900">
+                        {eachFeature.heading}
+                      </h3>
+                      <p className="text-base text-gray-700 max-w-lg">
+                        {eachFeature.oneLiner}
+                      </p>
+
+                      <a
+                        href={`features/${eachFeature.slug}`}
+                        className="border-[1px] border-accent/10 m-0 h-8 w-28 bg-accent/10 rounded-full hover:bg-accent/20 transition-colors duration-200 focus:outline-accent mt-4 flex items-center justify-center"
+                      >
+                        <span className="text-accent text-sm font-medium">
+                          Learn More
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </AnimationContainer>
+              </div>
+            );
+          })}
+        </div>
       </div>
+
+      {/* <div className="flex items-center justify-center w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-2 gap-6 p-4 w-full max-w-[800px]">
+          {availableFeatures.map((eachFeature, index) => {
+            return (
+              <FeatureCard
+                heading={eachFeature.heading}
+                oneLiner={eachFeature.oneLiner}
+                icon={eachFeature.icon}
+                key={index}
+              />
+            );
+          })}
+        </div>
+      </div> */}
     </div>
   );
 };

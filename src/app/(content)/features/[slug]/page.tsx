@@ -97,9 +97,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export default function ComingSoon() {
+const capitalizeFirstChar = (str: string) =>
+  str.charAt(0).toUpperCase() + str.slice(1);
+
+export default function ComingSoon({ params }: { params: { slug: string } }) {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-[#F8F4EB] px-6 md:px-12 py-12 text-center">
+    <div className="flex flex-col items-center justify-center min-h-screen max-h-screen bg-[#F8F4EB] px-6 md:px-12 py-12 text-center">
       {/* Header Section */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -135,9 +138,15 @@ export default function ComingSoon() {
       >
         <p className="text-gray-700 text-lg md:text-xl mb-6 leading-relaxed">
           We are working hard to bring you this exciting feature. Stay tuned for
-          updates and be the first to experience the new possibilities with
-          Explorer.
+          updates and be the first to experience the new possibilities{" "}
+          <span className="whitespace-nowrap">
+            with{" "}
+            <span className="text-primary1 font-bold underline">
+              {capitalizeFirstChar(params?.slug ?? "")}
+            </span>
+          </span>
         </p>
+
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}

@@ -5,18 +5,11 @@ import React from "react";
 import { AnimationContainer } from "@/components";
 import HeroHeading from "./HeroHeading";
 
-// mt-8 md:mt-12 lg:mt-32 
+// mt-8 md:mt-12 lg:mt-32
 
 const HeroSection = () => {
   return (
-    // TODO - Align center within space, make hero only appear in viewport without anything
-    // <section className="flex flex-col items-center justify-center pb-16 px-4 space-y-6 lg:space-y-12 mt-8 md:mt-12 lg:mt-32">
-    <section
-      className="flex flex-col items-center justify-center pb-16 px-4 space-y-6 lg:space-y-12 h-full min-h-screen"
-      style={{
-        minHeight: "calc(100vh - 56px)",
-      }}
-    >
+    <section className="flex flex-col items-center justify-center pb-16 px-4 space-y-6 lg:space-y-12 h-screen">
       <AnimationContainer delay={0.4} reverse viewport>
         <HeroHeading />
       </AnimationContainer>
@@ -24,11 +17,24 @@ const HeroSection = () => {
       {/* Our Motto:  self-discovery leads to excellence */}
 
       <AnimationContainer delay={0.5} reverse viewport>
-        <p className="w-full text-base sm:text-lg md:text-xl text-center text-gray-700 max-w-xs sm:max-w-[600px] px-4 sm:px-8 md:px-0 leading-relaxed">
+        <p className="w-full text-base sm:text-lg md:text-xl text-center text-gray-700 max-w-xs sm:max-w-[1200px] px-4 sm:px-8 md:px-0 leading-relaxed">
+          <span className="hidden sm:block">
+            Coaching individuals to thrive in their careers through the{" "}
+            <span className="whitespace-nowrap">self-discovery</span> of their{" "}
+            <span className="text-accent font-bold">&quot;why&quot;</span>
+            <br />
+            Knowing your purpose brings clarity, builds confidence, and reduces
+            stress, leading to a more purposeful career
+            <br />
+          </span>
+          Our Motto: self-discovery leads to excellence
+        </p>
+
+        {/* <p className="w-full text-base sm:text-lg md:text-xl text-center text-gray-700 max-w-xs sm:max-w-[600px] px-4 sm:px-8 md:px-0 leading-relaxed">
           Coaching individuals to thrive in their careers through the{" "}
           <span className="whitespace-nowrap">self-discovery</span> of their{" "}
           <span className="text-primary1 font-bold">&quot;why&quot;</span>
-        </p>
+        </p> */}
       </AnimationContainer>
 
       <div className="flex items-center justify-center">

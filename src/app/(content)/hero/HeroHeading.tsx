@@ -45,6 +45,8 @@ export default function HeroHeading() {
         Meets{" "}
         <span className="relative text-[#00B24B]">
           Wellbeing
+
+          {/* TODO - change to dragged line */}
           <svg
             className="absolute -bottom-2 left-0 w-full h-[10px] sm:h-[16px]"
             viewBox="0 0 180 15"

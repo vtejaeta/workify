@@ -17,9 +17,7 @@ const MarketingLayout = ({ children }: Props) => {
 
       <Navbar />
 
-      <HeroSection />
-
-      <main className="h-screen relative">{children}</main>
+      <main className="h-full">{children}</main>
     </>
   );
 };
